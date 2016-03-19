@@ -22,7 +22,7 @@ Channels
 Buffers
 Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象">
 <meta property="og:image" content="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png">
-<meta property="og:updated_time" content="2016-03-19T04:15:36.413Z">
+<meta property="og:updated_time" content="2016-03-19T05:15:07.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java NIO学习笔记">
 <meta name="twitter:description" content="Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
@@ -89,7 +89,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
             
             <div id="search-form-wrap">
 
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Buscar"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
 
 </div>
         </div>
@@ -110,7 +110,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
                 
                 <td>
                     
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Buscar"><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
 
                 </td>
             </tr>
@@ -129,16 +129,16 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
             <h2 id="name">Wang Kang</h2>
             <h3 id="title">Java Developer &amp; Distributed System</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Hangzhou, China</span>
-            <a id="follow" target="_blank" href="https://github.com/constwang/">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/constwang/">SEGUIR</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 3
-                <span>posts</span>
+                <span>Entradas</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>tag</span>
+                <span>Etiqueta</span>
             </div>
         </div>
         
@@ -207,13 +207,13 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 <li>DatagramChannel：通过UDP读写数据</li>
 <li>SocketChannel：通过TCP读写数据</li>
 <li>ServerSocketChannel：可以监听新进来的TCP连接。对每个新进来的连接都会创建一个SocketChannel<h3 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h3>缓冲区本质上是一块可以写入数据，然后可以从中读取数据的内存。这块内存被包装成NIO Buffer对象，并提供了一组方法，用来方便的访问该块内存。<h4 id="Buffer的capacity-position-limit"><a href="#Buffer的capacity-position-limit" class="headerlink" title="Buffer的capacity, position, limit"></a>Buffer的capacity, position, limit</h4><blockquote>
-<p><img src="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png" alt=""><br>#####capacity<br>作为一个内存块，Buffer有一个固定的大小值，也叫“capacity”.你只能往里写capacity个byte、long，char等类型。一旦Buffer满了，需要将其清空（通过读数据或者清除数据）才能继续写数据往里写数据。<br>#####position<br>当你写数据到Buffer中时，position表示当前的位置。初始的position值为0.当一个byte、long等数据写到Buffer后， position会向前移动到下一个可插入数据的Buffer单元。position最大可为capacity – 1.</p>
+<p><img src="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png" alt=""></p>
 </blockquote>
 </li>
 </ul>
-<p>当读取数据时，也是从某个特定位置读。当将Buffer从写模式切换到读模式，position会被重置为0. 当从Buffer的position处读取数据时，position向前移动到下一个可读的位置。</p>
-<p>#####limit<br>在写模式下，Buffer的limit表示你最多能往Buffer里写多少数据。 写模式下，limit等于Buffer的capacity。</p>
-<p>当切换Buffer到读模式时， limit表示你最多能读到多少数据。因此，当切换Buffer到读模式时，limit会被设置成写模式下的position值。换句话说，你能读到之前写入的所有数据（limit被设置成已写数据的数量，这个值在写模式下就是position）</p>
+<h5 id="capacity"><a href="#capacity" class="headerlink" title="capacity"></a>capacity</h5><p>作为一个内存块，Buffer有一个固定的大小值，也叫“capacity”.你只能往里写capacity个byte、long，char等类型。一旦Buffer满了，需要将其清空（通过读数据或者清除数据）才能继续写数据往里写数据。</p>
+<h5 id="position"><a href="#position" class="headerlink" title="position"></a>position</h5><p>当你写数据到Buffer中时，position表示当前的位置。初始的position值为0.当一个byte、long等数据写到Buffer后， position会向前移动到下一个可插入数据的Buffer单元。position最大可为capacity – 1.<br>当读取数据时，也是从某个特定位置读。当将Buffer从写模式切换到读模式，position会被重置为0. 当从Buffer的position处读取数据时，position向前移动到下一个可读的位置。</p>
+<h5 id="limit"><a href="#limit" class="headerlink" title="limit"></a>limit</h5><p>在写模式下，Buffer的limit表示你最多能往Buffer里写多少数据。 写模式下，limit等于Buffer的capacity。<br>当切换Buffer到读模式时， limit表示你最多能读到多少数据。因此，当切换Buffer到读模式时，limit会被设置成写模式下的position值。换句话说，你能读到之前写入的所有数据（limit被设置成已写数据的数量，这个值在写模式下就是position）</p>
 <h4 id="flip-方法"><a href="#flip-方法" class="headerlink" title="flip()方法"></a>flip()方法</h4><p>flip方法将Buffer从写模式切换到读模式。调用flip()方法会将position设回0，并将limit设置成之前position的值。</p>
 <h4 id="rewind-方法"><a href="#rewind-方法" class="headerlink" title="rewind()方法"></a>rewind()方法</h4><p>Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数据。limit保持不变，仍然表示能从Buffer中读取多少个元素（byte、char等）。</p>
 <h4 id="mark-和reset-方法"><a href="#mark-和reset-方法" class="headerlink" title="mark()和reset()方法"></a>mark()和reset()方法</h4><p>通过调用Buffer.mark()方法，可以标记Buffer中的一个特定position。之后可以通过调用Buffer.reset()方法恢复到这个position。</p>
@@ -233,7 +233,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/" data-id="cilymgild0000v0vrzmva2lsv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/" data-id="cilyoj2ef0000uwvrzh9o9cbb" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -301,7 +301,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 
             
     
-        <a href="http://yoursite.com/2016/03/17/Java-NIO学习笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/">Comments</a>
+        <a href="http://yoursite.com/2016/03/17/Java-NIO学习笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/">Comentarios</a>
     
 
         </footer>
@@ -312,7 +312,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     
     
         <a href="/2016/03/17/测试/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Más viejo</strong>
             <div class="article-nav-title">测试</div>
         </a>
     
@@ -340,7 +340,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recents</h3>
+        <h3 class="widget-title">Recientes</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -407,7 +407,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archivos</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">3</span></li></ul>
         </div>
@@ -420,7 +420,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Links</h3>
         <div class="widget">
             <ul>
                 
