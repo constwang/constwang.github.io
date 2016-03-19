@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Archivo | 一期一会</title>
+    <title>Java并发编程学习笔记 | 一期一会</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="quietly brilliant">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一期一会">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java并发编程学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/03/19/Java并发编程学习笔记/index.html">
 <meta property="og:site_name" content="一期一会">
 <meta property="og:description" content="quietly brilliant">
+<meta property="og:updated_time" content="2016-03-19T05:32:13.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一期一会">
+<meta name="twitter:title" content="Java并发编程学习笔记">
 <meta name="twitter:description" content="quietly brilliant">
     
 
@@ -146,35 +147,21 @@
 </aside>
 
             
-            <section id="main">
-                <div class="archive-year-wrap">
-                    <a href="/archives/2016" class="archive-year">2016</a>
-                </div>
-                <section class="archives-wrap">
-                    <div class="archives">
-            
-            <article class="archive-article archive-type-summary">
+            <section id="main"><article id="post-Java并发编程学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
     
-    <div class="archive-article-thumbnail">
-        <a href="/2016/03/19/Java并发编程学习笔记/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-    </div>
-    
-    <div class="archive-article-content">
-        <header class="archive-article-header">
-            
-    
-        <h1 itemprop="name">
-            <a class="archive-article-title" href="/2016/03/19/Java并发编程学习笔记/">Java并发编程学习笔记</a>
+        <h1 class="article-title" itemprop="name">
+            Java并发编程学习笔记
         </h1>
     
 
-            <div class="article-meta">
-                
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2016/03/19/Java并发编程学习笔记/">
@@ -183,167 +170,126 @@
     </div>
 
 
-                
-                
-            </div>
-        </header>
-        <div class="article-entry">
-            <p></p>
-            <p class="article-more-link">
-                <a href="/2016/03/19/Java并发编程学习笔记/#more">자세히 보기</a>
-            </p>
-        </div>
-    </div>
-</article>
+                    
+                    
+                </div>
+            </header>
         
-            <article class="archive-article archive-type-summary">
-    
-    <div class="archive-article-thumbnail">
-        <a href="/2016/03/17/Java-NIO学习笔记/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png)" alt="Java NIO学习笔记" class="thumbnail-image"></span>
-    
-</a>
-    </div>
-    
-    <div class="archive-article-content">
-        <header class="archive-article-header">
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/03/19/Java并发编程学习笔记/" data-id="cilytl6ka0000aovrux67jl5y" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
             
     
-        <h1 itemprop="name">
-            <a class="archive-article-title" href="/2016/03/17/Java-NIO学习笔记/">Java NIO学习笔记</a>
-        </h1>
+        <a href="http://yoursite.com/2016/03/19/Java并发编程学习笔记/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/19/Java并发编程学习笔记/">Comentarios</a>
     
 
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/17/Java-NIO学习笔记/">
-            <time datetime="2016-03-17T12:11:32.000Z" itemprop="datePublished">2016-03-17</time>
-        </a>
+        </footer>
     </div>
-
-
-                
-                
-            </div>
-        </header>
-        <div class="article-entry">
-            <p>Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
-NIO组成Java NIO由下面几个核心部分组成：
-
-Channels
-Buffers
-Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/Java-NIO学习笔记/#more">자세히 보기</a>
-            </p>
-        </div>
-    </div>
-</article>
+    
         
-            <article class="archive-article archive-type-summary">
-    
-    <div class="archive-article-thumbnail">
-        <a href="/2016/03/17/测试/" class="thumbnail">
+<nav id="article-nav">
     
     
-        <span style="background-image:url(https://www.zybuluo.com/static/img/logo.png)" alt="测试" class="thumbnail-image"></span>
-    
-</a>
-    </div>
-    
-    <div class="archive-article-content">
-        <header class="archive-article-header">
-            
-    
-        <h1 itemprop="name">
-            <a class="archive-article-title" href="/2016/03/17/测试/">测试</a>
-        </h1>
-    
-
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/17/测试/">
-            <time datetime="2016-03-17T06:35:43.000Z" itemprop="datePublished">2016-03-17</time>
+        <a href="/2016/03/17/Java-NIO学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">Java NIO学习笔记</div>
         </a>
-    </div>
+    
+</nav>
 
 
-                
-                
-            </div>
-        </header>
-        <div class="article-entry">
-            <p>欢迎使用 Cmd Markdown 编辑阅读器
-我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，Cmd Markdown 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：
-
-
-整理知识，学习笔记
-发布日记，杂文，所见所想
-撰写发布技术文稿（代码支持）
-撰写发布学术论文（LaTeX 公式支持）
-
-
-
-除</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/测试/#more">자세히 보기</a>
-            </p>
-        </div>
-    </div>
+    
 </article>
+
+
+    
+    <section id="comments">
+    
         
-            <article class="archive-article archive-type-summary">
-    
-    <div class="archive-article-thumbnail">
-        <a href="/2016/03/17/helloworld/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://7xrz2m.com1.z0.glb.clouddn.com/th.jpg)" alt="helloworld" class="thumbnail-image"></span>
-    
-</a>
-    </div>
-    
-    <div class="archive-article-content">
-        <header class="archive-article-header">
-            
-    
-        <h1 itemprop="name">
-            <a class="archive-article-title" href="/2016/03/17/helloworld/">helloworld</a>
-        </h1>
-    
-
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/17/helloworld/">
-            <time datetime="2016-03-17T02:25:34.000Z" itemprop="datePublished">2016-03-17</time>
-        </a>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-
-                
-                
-            </div>
-        </header>
-        <div class="article-entry">
-            <p>this is the first pages created by wangkang!
-</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/helloworld/#more">자세히 보기</a>
-            </p>
-        </div>
-    </div>
-</article>
-        
-        </div></section>
+    
     </section>
+
+</section>
             
                 <aside id="sidebar">
     
@@ -479,11 +425,13 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     var disqus_shortname = 'hexo-theme-icarus';
     
     
+    var disqus_url = 'http://yoursite.com/2016/03/19/Java并发编程学习笔记/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
