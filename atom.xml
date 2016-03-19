@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一期一会</title>
+  <title>Once Upon A Time In ZJU</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-19T05:32:13.129Z</updated>
+  <updated>2016-03-19T07:52:32.344Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java synchronized的原理学习</title>
+    <link href="http://yoursite.com/2016/03/19/Java-synchronized%E7%9A%84%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2016/03/19/Java-synchronized的原理学习/</id>
+    <published>2016-03-19T07:52:32.000Z</published>
+    <updated>2016-03-19T07:52:32.344Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Java并发编程学习笔记</title>
