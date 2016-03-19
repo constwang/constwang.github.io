@@ -3,17 +3,35 @@
 <head>
     <meta charset="utf-8">
     
-    <title>一期一会</title>
+    <title>Java NIO学习笔记 | 一期一会</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="quietly brilliant">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一期一会">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
+NIO组成Java NIO由下面几个核心部分组成：
+
+Channels
+Buffers
+Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java NIO学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/03/17/Java-NIO学习笔记/index.html">
 <meta property="og:site_name" content="一期一会">
-<meta property="og:description" content="quietly brilliant">
+<meta property="og:description" content="Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
+NIO组成Java NIO由下面几个核心部分组成：
+
+Channels
+Buffers
+Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象">
+<meta property="og:image" content="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png">
+<meta property="og:updated_time" content="2016-03-19T04:15:36.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一期一会">
-<meta name="twitter:description" content="quietly brilliant">
+<meta name="twitter:title" content="Java NIO学习笔记">
+<meta name="twitter:description" content="Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
+NIO组成Java NIO由下面几个核心部分组成：
+
+Channels
+Buffers
+Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象">
+<meta name="twitter:image" content="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png">
     
 
     
@@ -146,8 +164,7 @@
 </aside>
 
             
-            <section id="main">
-            <article id="post-Java-NIO学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Java-NIO学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -155,8 +172,8 @@
             <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/03/17/Java-NIO学习笔记/">Java NIO学习笔记</a>
+        <h1 class="article-title" itemprop="name">
+            Java NIO学习笔记
         </h1>
     
 
@@ -177,15 +194,36 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Java NIO相关NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。
-NIO组成Java NIO由下面几个核心部分组成：
+            
+            <h1 id="Java-NIO相关"><a href="#Java-NIO相关" class="headerlink" title="Java NIO相关"></a>Java NIO相关</h1><p>NIO创建的目的是为了让程序员实现更快的I/O而无需编写自定义的本机代码。NIO将最耗时的I/O操作（即填充和提取缓冲区）转移回操作系统，因此可以极大的提高效率。</p>
+<h2 id="NIO组成"><a href="#NIO组成" class="headerlink" title="NIO组成"></a>NIO组成</h2><p>Java NIO由下面几个核心部分组成：</p>
+<ul>
+<li>Channels</li>
+<li>Buffers</li>
+<li>Selectors<br>通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象。一个Buffer实质上是一个容器对象。发送给一个通道的所有对象都必须首先放到缓冲区中；同样地，从通道中读取的任何数据都要读到缓冲区中。</li>
+</ul>
+<h3 id="Channel"><a href="#Channel" class="headerlink" title="Channel"></a>Channel</h3><ul>
+<li>FileChannel：从文件中读写数据</li>
+<li>DatagramChannel：通过UDP读写数据</li>
+<li>SocketChannel：通过TCP读写数据</li>
+<li>ServerSocketChannel：可以监听新进来的TCP连接。对每个新进来的连接都会创建一个SocketChannel<h3 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h3>缓冲区本质上是一块可以写入数据，然后可以从中读取数据的内存。这块内存被包装成NIO Buffer对象，并提供了一组方法，用来方便的访问该块内存。<h4 id="Buffer的capacity-position-limit"><a href="#Buffer的capacity-position-limit" class="headerlink" title="Buffer的capacity, position, limit"></a>Buffer的capacity, position, limit</h4><blockquote>
+<p><img src="http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png" alt=""><br>#####capacity<br>作为一个内存块，Buffer有一个固定的大小值，也叫“capacity”.你只能往里写capacity个byte、long，char等类型。一旦Buffer满了，需要将其清空（通过读数据或者清除数据）才能继续写数据往里写数据。<br>#####position<br>当你写数据到Buffer中时，position表示当前的位置。初始的position值为0.当一个byte、long等数据写到Buffer后， position会向前移动到下一个可插入数据的Buffer单元。position最大可为capacity – 1.</p>
+</blockquote>
+</li>
+</ul>
+<p>当读取数据时，也是从某个特定位置读。当将Buffer从写模式切换到读模式，position会被重置为0. 当从Buffer的position处读取数据时，position向前移动到下一个可读的位置。</p>
+<p>#####limit<br>在写模式下，Buffer的limit表示你最多能往Buffer里写多少数据。 写模式下，limit等于Buffer的capacity。</p>
+<p>当切换Buffer到读模式时， limit表示你最多能读到多少数据。因此，当切换Buffer到读模式时，limit会被设置成写模式下的position值。换句话说，你能读到之前写入的所有数据（limit被设置成已写数据的数量，这个值在写模式下就是position）</p>
+<h4 id="flip-方法"><a href="#flip-方法" class="headerlink" title="flip()方法"></a>flip()方法</h4><p>flip方法将Buffer从写模式切换到读模式。调用flip()方法会将position设回0，并将limit设置成之前position的值。</p>
+<h4 id="rewind-方法"><a href="#rewind-方法" class="headerlink" title="rewind()方法"></a>rewind()方法</h4><p>Buffer.rewind()将position设回0，所以你可以重读Buffer中的所有数据。limit保持不变，仍然表示能从Buffer中读取多少个元素（byte、char等）。</p>
+<h4 id="mark-和reset-方法"><a href="#mark-和reset-方法" class="headerlink" title="mark()和reset()方法"></a>mark()和reset()方法</h4><p>通过调用Buffer.mark()方法，可以标记Buffer中的一个特定position。之后可以通过调用Buffer.reset()方法恢复到这个position。</p>
+<h4 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h4><p>slice() 方法根据现有的缓冲区创建子缓冲区 。其中<strong>新缓冲区与原来的缓冲区的一部分共享数据</strong>。<br>在某种意义上，子缓冲区就像原来的缓冲区中的一个窗口 。窗口的起始和结束位置通过设置 position 和 limit 值来指定，然后调用 Buffer 的 slice() 方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ByteBuffer buffer = ByteBuffer.allocate( <span class="number">10</span> );</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;buffer.capacity(); ++i) &#123;</span><br><span class="line">     buffer.put( (<span class="keyword">byte</span>)i );</span><br><span class="line">&#125;</span><br><span class="line">buffer.position( <span class="number">3</span> );</span><br><span class="line">buffer.limit( <span class="number">7</span> );</span><br><span class="line">ByteBuffer slice = buffer.slice();</span><br></pre></td></tr></table></figure></p>
+<p>上面的代码创建了一个包含槽3~槽6的子缓冲区</p>
+<h4 id="直接和间接缓冲区"><a href="#直接和间接缓冲区" class="headerlink" title="直接和间接缓冲区"></a>直接和间接缓冲区</h4><p>Sun的官方文档是这样描述直接缓冲区的。</p>
+<blockquote>
+<p>给定一个直接字节缓冲区，Java 虚拟机将尽最大努力直接对它执行本机 I/O 操作。也就是说，它会在每一次调用底层操作系统的本机 I/O 操作之前(或之后)，尝试避免将缓冲区的内容拷贝到一个中间缓冲区中(或者从一个中间缓冲区中拷贝数据)。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ByteBuffer buffer = ByteBuffer.allocateDirect( <span class="number">1024</span> );</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
-Channels
-Buffers
-Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来自任何地方)的所有数据都必须通过一个 Channel对象</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/Java-NIO学习笔记/#more">Read More</a>
-            </p>
         
         </div>
         <footer class="article-footer">
@@ -269,264 +307,34 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
         </footer>
     </div>
     
-</article>
-
-
         
-            <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/03/17/测试/">测试</a>
-        </h1>
     
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/17/测试/">
-            <time datetime="2016-03-17T06:35:43.000Z" itemprop="datePublished">2016-03-17</time>
+        <a href="/2016/03/17/测试/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">测试</div>
         </a>
-    </div>
-
-
-                    
-                    
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>欢迎使用 Cmd Markdown 编辑阅读器
-我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，Cmd Markdown 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：
-
-
-整理知识，学习笔记
-发布日记，杂文，所见所想
-撰写发布技术文稿（代码支持）
-撰写发布学术论文（LaTeX 公式支持）
-
-
-
-除</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/测试/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2016/03/17/测试/" data-id="cilym8lgs0001k4vr6m858ukl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="http://yoursite.com/2016/03/17/测试/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/17/测试/">Comments</a>
-    
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
 
-        
-            <article id="post-helloworld" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/03/17/helloworld/">helloworld</a>
-        </h1>
+    <section id="comments">
     
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/03/17/helloworld/">
-            <time datetime="2016-03-17T02:25:34.000Z" itemprop="datePublished">2016-03-17</time>
-        </a>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-
-                    
-                    
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>this is the first pages created by wangkang!
-</p>
-            <p class="article-more-link">
-                <a href="/2016/03/17/helloworld/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2016/03/17/helloworld/" data-id="cilym8ldu0000k4vrf2ayq0tq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="http://yoursite.com/2016/03/17/helloworld/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/03/17/helloworld/">Comments</a>
-    
+    </section>
 
-        </footer>
-    </div>
-    
-</article>
-
-
-        </section>
+</section>
             
                 <aside id="sidebar">
     
@@ -644,11 +452,13 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     var disqus_shortname = 'hexo-theme-icarus';
     
     
+    var disqus_url = 'http://yoursite.com/2016/03/17/Java-NIO学习笔记/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
