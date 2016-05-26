@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-19T07:52:32.344Z</updated>
+  <updated>2016-05-26T02:15:38.170Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,109 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Java synchronized的原理学习</title>
-    <link href="http://yoursite.com/2016/03/19/Java-synchronized%E7%9A%84%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2016/03/19/Java-synchronized的原理学习/</id>
-    <published>2016-03-19T07:52:32.000Z</published>
-    <updated>2016-03-19T07:52:32.344Z</updated>
+    <title>Spring AOP related</title>
+    <link href="http://yoursite.com/2016/05/26/Spring-AOP-related/"/>
+    <id>http://yoursite.com/2016/05/26/Spring-AOP-related/</id>
+    <published>2016-05-26T02:15:38.000Z</published>
+    <updated>2016-05-26T02:15:38.170Z</updated>
     
     <content type="html"></content>
     
     <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Spring IOC related</title>
+    <link href="http://yoursite.com/2016/05/13/Spring-IOC-related/"/>
+    <id>http://yoursite.com/2016/05/13/Spring-IOC-related/</id>
+    <published>2016-05-13T01:47:57.000Z</published>
+    <updated>2016-05-18T06:43:44.162Z</updated>
+    
+    <content type="html">&lt;p&gt;IOC——Inversion of Control，即“控制反转”，在Java开发中，IOC意味着你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。理解的关键是“谁控制谁、控制了什么、为何是反转、哪些方面反转了”&lt;br&gt;谁控制谁、控制什么：Ioc有专门的容器来创建这些对象，是Ioc容器控制了对象，主要控制了外部资源获取（不只是对象还包括文件等）&lt;/p&gt;
+&lt;h2 id=&quot;为何是反转、哪些方面反转了：传统的应用程序是由我们自己在对象中主动控制去直接获取依赖对象，而反转则是由容器来帮忙创建及注入依赖对象，对象只是被动的接受依赖对象。哪些方面反转了？依赖对象的获取反转了。&quot;&gt;&lt;a href=&quot;#为何是反转、哪些方面反转了：传统的应用程序是由我们自己在对象中主动控制去直接获取依赖对象，而反转则是由容器来帮忙创建及注入依赖对象，对象只是被动的接受依赖对象。哪些方面反转了？依赖对象的获取反转了。&quot; class=&quot;headerlink&quot; title=&quot;为何是反转、哪些方面反转了：传统的应用程序是由我们自己在对象中主动控制去直接获取依赖对象，而反转则是由容器来帮忙创建及注入依赖对象，对象只是被动的接受依赖对象。哪些方面反转了？依赖对象的获取反转了。&quot;&gt;&lt;/a&gt;为何是反转、哪些方面反转了：传统的应用程序是由我们自己在对象中主动控制去直接获取依赖对象，而反转则是由容器来帮忙创建及注入依赖对象，对象只是被动的接受依赖对象。哪些方面反转了？依赖对象的获取反转了。&lt;/h2&gt;&lt;h1 id=&quot;IoC和DI&quot;&gt;&lt;a href=&quot;#IoC和DI&quot; class=&quot;headerlink&quot; title=&quot;IoC和DI&quot;&gt;&lt;/a&gt;IoC和DI&lt;/h1&gt;&lt;p&gt;Dependency Injection，即“依赖注入”：是组件之间依赖关系由容器在运行期决定。&lt;br&gt;谁依赖于谁：应用程序依赖于Ioc容器&lt;br&gt;为什么需要依赖：应用程序需要IoC容器提供对象需要的外部资源&lt;br&gt;谁注入谁：IoC容器注入应用程序某个对象，应用程序依赖的对象&lt;br&gt;注入了什么：就是注入某个对象所需要的外部资源（包括对象、资源、常量数据）&lt;/p&gt;
+&lt;p&gt;Spring IoC容器的依赖有两层含义：Bean依赖容器和容器注入Bean的依赖资源&lt;br&gt;Bean依赖容器：这里的依赖指的是容器负责创建Bean并管理Bean的生命周期，正是由于由容器创建Bean并注入依赖，也就是控制权被反转了。此处的有依赖指Bean和容器之间的依赖关系&lt;br&gt;容器注入Bean的依赖资源：容器负责注入Bean的依赖资源，依赖资源可以是Bean、外部文件、常量数据、在Java中都反映为对象并且由容器负责组装Bean之间的依赖关系，此处的依赖是指Bean之间的&lt;/p&gt;
+&lt;p&gt;依赖注入的好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态替换Bean依赖对象，程序更灵活&lt;/li&gt;
+&lt;li&gt;更好的面向接口编程，代码更清晰&lt;/li&gt;
+&lt;li&gt;更好的实践优先使用对象组合，而不是类继承&lt;/li&gt;
+&lt;li&gt;增加Bean的可复用性&lt;/li&gt;
+&lt;li&gt;降低Bean之间的耦合&lt;/li&gt;
+&lt;li&gt;代码结果更清晰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Bean的配置&quot;&gt;&lt;a href=&quot;#Bean的配置&quot; class=&quot;headerlink&quot; title=&quot;Bean的配置&quot;&gt;&lt;/a&gt;Bean的配置&lt;/h1&gt;&lt;p&gt;Spring IOC容器的目的就是管理bean，这些bean将根据配置文件中的bean定义进行创建，而bean定义在容器内部由BeanDefinition对象表示，该定义祝耀包含以下信息:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全限定类名(FQN)[^footnote]: 用于定义Bean的实现类&lt;/li&gt;
+&lt;li&gt;Bean 行为定义： 这些定义了Bean在容器中的行为；包括作用域（单例、原型创建）、是否惰性初始化及生命周期等。&lt;/li&gt;
+&lt;li&gt;Bean 之间管理定义：即对其他bean的引用，也就是依赖关系定义，这些引用bean也可以称之为同事bean或依赖bean，也就是依赖注入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;Bean的命名&quot;&gt;&lt;a href=&quot;#Bean的命名&quot; class=&quot;headerlink&quot; title=&quot;Bean的命名&quot;&gt;&lt;/a&gt;Bean的命名&lt;/h1&gt;&lt;p&gt;每个Bean可以有一个或多个id（或称之为标识符或名字），其中第一个 id 为“标识符”，其余 id 叫做“别名”；这些 id 在Ioc容器中必须唯一。&lt;br&gt;name和id可以指定它们中的一个时作为“标识符”。在使用基于xml的配置元数据时，在xml中的id是一个真正的xml id属性，因此当其他的定义来引用这个id时就体现出id的好处了，可以利用xml解析器来验证引用的这个id是否存在，从而更早的发现是否引用了一个不存在的bean，而使用那么，则可能要在真正使用bean时才能发现引用一个不存在的bean&lt;/p&gt;
+&lt;p&gt;[^footnote]: 源文件中的全新定名是包名加类名， 包名的各个部分之间，包名和类名之间，使用点号分割。如Object类，在源文件中的全限定名是java.lang.Object 。而class文件中的全限定名是将点号替换成“/” 。例如，Object类在class文件中的全限定名是 java/lang/Object 。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;IOC——Inversion of Control，即“控制反转”，在Java开发中，IOC意味着你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。理解的关键是“谁控制谁、控制了什么、为何是反转、哪些方面反转了”&lt;br&gt;谁控制谁、控制什么：Ioc有专门的容器来
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RDD：基于内存的集群计算容错抽象</title>
+    <link href="http://yoursite.com/2016/04/05/RDD%EF%BC%9A%E5%9F%BA%E4%BA%8E%E5%86%85%E5%AD%98%E7%9A%84%E9%9B%86%E7%BE%A4%E8%AE%A1%E7%AE%97%E5%AE%B9%E9%94%99%E6%8A%BD%E8%B1%A1/"/>
+    <id>http://yoursite.com/2016/04/05/RDD：基于内存的集群计算容错抽象/</id>
+    <published>2016-04-05T06:56:05.000Z</published>
+    <updated>2016-04-15T08:13:11.688Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java synchronized的原理学习</title>
+    <link href="http://yoursite.com/2016/03/19/Java-synchronized%E7%9A%84%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2016/03/19/Java-synchronized的原理学习/</id>
+    <published>2016-03-19T07:52:32.000Z</published>
+    <updated>2016-03-22T14:37:16.079Z</updated>
+    
+    <content type="html">&lt;p&gt;Java中的每一个对象都可以作为锁，具体表现为以下3种形式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于普通同步方法，锁是当前实例对象&lt;/li&gt;
+&lt;li&gt;对于静态同步方法，锁是当前类的Class对象&lt;/li&gt;
+&lt;li&gt;对于同步方法块，锁是Synchronized括号里配置的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;synchronized在JVM中的实现原理&quot;&gt;&lt;a href=&quot;#synchronized在JVM中的实现原理&quot; class=&quot;headerlink&quot; title=&quot;synchronized在JVM中的实现原理&quot;&gt;&lt;/a&gt;synchronized在JVM中的实现原理&lt;/h2&gt;&lt;p&gt;JVM基于进入和退出Monitor对象来实现方法同步和代码块同步，但两者的实现细节不一样。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码块同步是使用 monitorenter 和 monitorexit指令实现的&lt;/li&gt;
+&lt;li&gt;方法同步(todo)&lt;br&gt;monitorenter指令是在编译后插入到同步代码块的开始位置，而monitorexit是插入到方法结束处和异常处，JVM要保证每个monitorenter必须有对应的monitorexit与之配对。任何一个对象都有一个monitor与之关联，当且一个monitor被持有后，它将处于锁定状态。线程执行到monitorenter指令时，将会尝试获取对象所对应的monitor的所有权，即尝试获得对象的锁。&lt;h3 id=&quot;Java对象头&quot;&gt;&lt;a href=&quot;#Java对象头&quot; class=&quot;headerlink&quot; title=&quot;Java对象头&quot;&gt;&lt;/a&gt;Java对象头&lt;/h3&gt;synchronized用的锁存在Java对象头里，如果对象是数组类型，则虚拟机用3个字宽（Word）存储对象头；如果对象是非数组类型，则用2个字宽存储对象头。&lt;br&gt;长度    |内容            |说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;32/64位 |Mark Word       |存储对象的hashCode或锁信息&lt;br&gt;32/64位 |Class Metadata  |存储到对象类型数据的指针&lt;br&gt;32/64位 |Array Length    |数组的长度（如果当前对象是数组）&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Java中的每一个对象都可以作为锁，具体表现为以下3种形式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于普通同步方法，锁是当前实例对象&lt;/li&gt;
+&lt;li&gt;对于静态同步方法，锁是当前类的Class对象&lt;/li&gt;
+&lt;li&gt;对于同步方法块，锁是Synchronized括号里配置的对象&lt;/li
     
     </summary>
     

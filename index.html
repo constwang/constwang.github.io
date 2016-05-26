@@ -115,7 +115,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                8
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -147,6 +147,370 @@
 
             
             <section id="main">
+            <article id="post-Spring-AOP-related" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/05/26/Spring-AOP-related/">Spring AOP related</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/05/26/Spring-AOP-related/">
+            <time datetime="2016-05-26T02:15:38.000Z" itemprop="datePublished">2016-05-26</time>
+        </a>
+    </div>
+
+
+                    
+                    
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p></p>
+            <p class="article-more-link">
+                <a href="/2016/05/26/Spring-AOP-related/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/05/26/Spring-AOP-related/" data-id="ciono4p6k00038ovrw665oz8y" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/05/26/Spring-AOP-related/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/05/26/Spring-AOP-related/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+        
+            <article id="post-Spring-IOC-related" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/05/13/Spring-IOC-related/">Spring IOC related</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/05/13/Spring-IOC-related/">
+            <time datetime="2016-05-13T01:47:57.000Z" itemprop="datePublished">2016-05-13</time>
+        </a>
+    </div>
+
+
+                    
+                    
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>IOC——Inversion of Control，即“控制反转”，在Java开发中，IOC意味着你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。理解的关键是“谁控制谁、控制了什么、为何是反转、哪些方面反转了”谁控制谁、控制什么：Ioc有专门的容器来创建这些对象，是Ioc容器控制了对象，主要控制了外部资源获取（不只是对象还包括文件等）
+为何是反转、哪些方面反转了：传统的应用程序是由</p>
+            <p class="article-more-link">
+                <a href="/2016/05/13/Spring-IOC-related/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/05/13/Spring-IOC-related/" data-id="ciono4p6r00058ovrgrhjx75v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/05/13/Spring-IOC-related/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/05/13/Spring-IOC-related/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+        
+            <article id="post-RDD：基于内存的集群计算容错抽象" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2016/04/05/RDD：基于内存的集群计算容错抽象/">RDD：基于内存的集群计算容错抽象</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2016/04/05/RDD：基于内存的集群计算容错抽象/">
+            <time datetime="2016-04-05T06:56:05.000Z" itemprop="datePublished">2016-04-05</time>
+        </a>
+    </div>
+
+
+                    
+                    
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>摘要</p>
+            <p class="article-more-link">
+                <a href="/2016/04/05/RDD：基于内存的集群计算容错抽象/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2016/04/05/RDD：基于内存的集群计算容错抽象/" data-id="ciono4p6c00028ovrtsy8wzvy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2016/04/05/RDD：基于内存的集群计算容错抽象/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/04/05/RDD：基于内存的集群计算容错抽象/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+        
             <article id="post-Java-synchronized的原理学习" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -177,7 +541,16 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p></p>
+            <p>Java中的每一个对象都可以作为锁，具体表现为以下3种形式。
+
+对于普通同步方法，锁是当前实例对象
+对于静态同步方法，锁是当前类的Class对象
+对于同步方法块，锁是Synchronized括号里配置的对象
+
+
+synchronized在JVM中的实现原理JVM基于进入和退出Monitor对象来实现方法同步和代码块同步，但两者的实现细节不一样。
+
+代码块同步是使用 monitorenter 和 m</p>
             <p class="article-more-link">
                 <a href="/2016/03/19/Java-synchronized的原理学习/#more">Read More</a>
             </p>
@@ -190,7 +563,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/19/Java-synchronized的原理学习/" data-id="cilyub92b0000twvrsp4nx962" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/19/Java-synchronized的原理学习/" data-id="ciono4p5x00008ovr3s3ba364" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -311,7 +684,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/19/Java并发编程学习笔记/" data-id="cilyub92m0001twvr6tunhum5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/19/Java并发编程学习笔记/" data-id="ciono4p6n00048ovrle3pr8we" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -437,7 +810,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/" data-id="cilyub95t0004twvrf7qi1143" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/17/Java-NIO学习笔记/" data-id="ciono4p6800018ovr9b0vtefh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -569,7 +942,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/17/测试/" data-id="cilyub92z0003twvrkpmqiji9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/17/测试/" data-id="ciono4p7100078ovri1i0qcoy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -691,7 +1064,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/03/17/helloworld/" data-id="cilyub92v0002twvry1esz08a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/03/17/helloworld/" data-id="ciono4p6w00068ovr1bj5cv66" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -781,6 +1154,60 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/05/26/Spring-AOP-related/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/05/26/Spring-AOP-related/" class="title">Spring AOP related</a></p>
+                            <p class="item-date"><time datetime="2016-05-26T02:15:38.000Z" itemprop="datePublished">2016-05-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/05/13/Spring-IOC-related/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/05/13/Spring-IOC-related/" class="title">Spring IOC related</a></p>
+                            <p class="item-date"><time datetime="2016-05-13T01:47:57.000Z" itemprop="datePublished">2016-05-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/04/05/RDD：基于内存的集群计算容错抽象/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/04/05/RDD：基于内存的集群计算容错抽象/" class="title">RDD：基于内存的集群计算容错抽象</a></p>
+                            <p class="item-date"><time datetime="2016-04-05T06:56:05.000Z" itemprop="datePublished">2016-04-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/03/19/Java-synchronized的原理学习/" class="thumbnail">
     
     
@@ -814,60 +1241,6 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/17/Java-NIO学习笔记/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://ifeve.com/wp-content/uploads/2013/06/buffers-modes.png)" alt="Java NIO学习笔记" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/03/17/Java-NIO学习笔记/" class="title">Java NIO学习笔记</a></p>
-                            <p class="item-date"><time datetime="2016-03-17T12:11:32.000Z" itemprop="datePublished">2016-03-17</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/17/测试/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://www.zybuluo.com/static/img/logo.png)" alt="测试" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/03/17/测试/" class="title">测试</a></p>
-                            <p class="item-date"><time datetime="2016-03-17T06:35:43.000Z" itemprop="datePublished">2016-03-17</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/03/17/helloworld/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://7xrz2m.com1.z0.glb.clouddn.com/th.jpg)" alt="helloworld" class="thumbnail-image"></span>
-    
-</a>
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/03/17/helloworld/" class="title">helloworld</a></p>
-                            <p class="item-date"><time datetime="2016-03-17T02:25:34.000Z" itemprop="datePublished">2016-03-17</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -879,7 +1252,7 @@ Selectors通道是对原 I/O 包中的流的模拟。到任何目的地(或来�
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
